@@ -83,16 +83,35 @@ Agent 项目本身不负责持久化这些任务数据。业务系统可以根�
 
 ## 安装方式
 
-开发阶段可以通过本地依赖方式引入：
+### 从 GitHub 安装
+
+需要本机已安装 [Git](https://git-scm.com/)，Python 版本不低于 `3.10`（见 `pyproject.toml`）。
+
+```bash
+pip install "git+https://github.com/AICodeFactory/base-agents.git"
+```
+
+默认使用仓库的默认分支（一般为 `main`）。如需固定分支或版本标签：
+
+```bash
+pip install "git+https://github.com/AICodeFactory/base-agents.git@main"
+pip install "git+https://github.com/AICodeFactory/base-agents.git@v1.0.0"
+```
+
+安装后仍使用 `from business_agent import ...` 导入（PyPI 分发名为 `role-aware-business-agent`，与导入包名 `business_agent` 不同属正常情况）。
+
+### 本地开发（可编辑安装）
+
+在克隆后的仓库根目录执行：
 
 ```bash
 pip install -e .
 ```
 
-发布到私有 PyPI 后，业务系统可以通过包名安装：
+可选安装开发依赖：
 
 ```bash
-pip install role-aware-business-agent
+pip install -e ".[dev]"
 ```
 
 ## 快速开始

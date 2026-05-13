@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "role-aware-business-agent"
-version = "0.1.0"
+version = "1.0.0"
 description = "Role-aware business agent toolkit based on DeepAgents, LangChain, and LangGraph."
 readme = "README.md"
 requires-python = ">=3.10"
